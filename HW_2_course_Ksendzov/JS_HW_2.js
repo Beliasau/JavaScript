@@ -19,6 +19,21 @@ while (b <= 10){
 //1*. Преобразовать 1 задачу в функцию, принимающую на вход степень, в которую будет возводиться число 2
 
 
+const exp = function(b){
+    if(typeof b == 'number'){
+        if(b >= 1 && b <= 10) {
+        console.log("2^" + b + " =", Math.pow(2,b))
+        }else{
+        console.log('enter the correct number')
+        }
+    }else {console.log('enter number value')
+}
+}
+exp(5)
+exp(11)
+exp(-4)
+exp('grep')
+
 
 //2. Написать скрипт, который выведет 5 строк в консоль таким образом, чтобы в первой строчке выводилось :), во второй :):) и так далее
 //Пример в консоли:

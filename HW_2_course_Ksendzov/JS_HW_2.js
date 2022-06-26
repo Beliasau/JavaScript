@@ -54,10 +54,36 @@ for (var i = 0; i < 5; i++){
 
 
 
+c = 1
+for (var i = 1; i < 6; i++){
+    console.log(':)'.repeat(c))
+    c ++
+}
+
+
 
 
 //2*. Преобразовать 2 задачу в функцию, принимающую на вход строку, которая и будет выводиться в консоль (как в условии смайлик), а также количество строк для вывода 
 //e.g. function printSmile(stroka, numberOfRows)
+
+
+
+function printSmile(stroka, numberOfRows){
+    if(numberOfRows > 0){
+        for (var i = 1; i <= numberOfRows; i++){
+            с = i
+    console.log(stroka.repeat(с))
+            с++
+        }
+    }else{
+        console.log("enter the correct number")
+    }
+}
+
+printSmile("smile", 7)
+
+
+
 
 //3**.  Написать функцию, которая принимает на вход слово. Задача функции посчитать и вывести в консоль, сколько в слове гласных, и сколько согласных букв.
 //e.g. function getWordStructure(word)
@@ -65,6 +91,13 @@ for (var i = 0; i < 5; i++){
 //Слово (word) состоит из  (число) гласных и (число) согласных букв
 
 //Проверки: 'case', 'Case', 'Check-list'
+
+
+
+
+
+
+
 
 //4**. Написать функцию, которая проверяет, является ли слово палиндромом
 //e.g. function isPalindrom(word)

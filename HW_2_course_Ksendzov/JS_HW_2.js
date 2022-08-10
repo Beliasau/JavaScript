@@ -104,13 +104,24 @@ for(i=1; i<=5; i++){
 
 
 
-function printSmile(stroka, numberOfRows){
-    for(i=1; i<=numberOfRows; i++){
-        console.log(stroka.repeat(i))
-    }
-}
+// function printSmile(stroka, numberOfRows){
+//     for(i=1; i<=numberOfRows; i++){
+//         console.log(stroka.repeat(i))
+//     }
+// }
 
-printSmile("hello ", 3)
+// printSmile("hello ", 3)
+
+
+// let result = ''
+// function printSmile(stroka, numberOfRows){
+//     for(i=1; i<=numberOfRows; i++){
+//         result = result + stroka
+//         console.log(result)
+//     }
+// }
+
+// printSmile(':)', 5)
 
 
 // let result = ''
@@ -123,20 +134,19 @@ printSmile("hello ", 3)
 // printSmile(':)', 11)
 
 
+// function printSmile(stroka, numberOfRows){
+//     if(numberOfRows > 0){
+//         for (var i = 1; i <= numberOfRows; i++){
+//             с = i
+//     console.log(stroka.repeat(с))
+//             с++
+//         }
+//     }else{
+//         console.log("enter the correct number")
+//     }
+// }
 
-function printSmile(stroka, numberOfRows){
-    if(numberOfRows > 0){
-        for (var i = 1; i <= numberOfRows; i++){
-            с = i
-    console.log(stroka.repeat(с))
-            с++
-        }
-    }else{
-        console.log("enter the correct number")
-    }
-}
-
-printSmile("smile", 7)
+// printSmile("smile ", 7)
 
 
 
@@ -151,6 +161,43 @@ printSmile("smile", 7)
 
 
 
+function getWordStructure(word){
+
+    const vowels = 'aeiouy'.split('')                    
+    const consonants = 'qwrtpsdfghjklzxcvbnm'.split('')
+
+    let vowelsCount = 0
+    let consonantsCount = 0                                 
+
+    for(const char of word.toLowerCase()){       
+        if(vowels.includes(char)) vowelsCount++   
+        else if (consonants.includes(char)) consonantsCount++
+    }
+    console.log(`в слове ${word} : ${vowelsCount} гласных и ${consonantsCount} согласных букв`)
+}
+
+getWordStructure('Check-list')
+
+
+
+
+function getWordStructure2(word){
+    console.log(`в слове ${word} содержится ${(word.match(/[aeiouy]/gi)).length} гласных и ${(word.match(/[wrtpsdfghjklzxcvbnm]/gi)).length} согласных`)
+}
+
+getWordStructure2('Case')
+
+
+
+
+function getWordStructure3(word){
+    console.log(`в слове ${word} содержится 
+    ${(word.match(/[aeiouy]/gi)) ? (word.match(/[aeiouy]/gi)).length : 0 } 
+    гласных и 
+    ${(word.match(/[wrtpsdfghjklzxcvbnm]/gi)) ? (word.match(/[wrtpsdfghjklzxcvbnm]/gi)).length : 0} согласных букв`)
+}
+
+getWordStructure3('case')
 
 
 
@@ -159,3 +206,36 @@ printSmile("smile", 7)
 //e.g. function isPalindrom(word)
 
 //Проверки: 'abba', 'Abba'
+
+
+
+function isPalindrom(word){
+    word = word.toLowerCase()
+    for(let i=0, j=word.length-1; i<word.length, j>=0; i++, j--){
+        if(word[i] !== word[j]){
+            return false
+        }
+    }
+    return true
+}
+
+console.log(isPalindrom('Aaddaa'))
+
+
+function isPalindrom2(word){
+    return word.toLowerCase() === word.toLowerCase().split('').reverse().join('')
+}
+
+console.log(isPalindrom2('Aaaa'))
+
+
+function isPalindrom3(word){
+    word = word.toLowerCase()
+    for(i=0; i<=word.length/2; i++){        
+        if(word[i] !== word[word.length-1-i])   
+        return false
+    }
+    return true
+}
+
+console.log(isPalindrom3('aSsa'))

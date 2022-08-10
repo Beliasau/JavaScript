@@ -16,7 +16,30 @@ while (b <= 10){
 
 
 
+for (i = 1; i <= 10; i++){
+    console.log(Math.pow(2, i))             
+}
+
+
+
+for (i = 1; i <= 10; i++){
+    console.log(2 ** i)             // **  возводит 2 в степень i
+}
+
+
+
+
 //1*. Преобразовать 1 задачу в функцию, принимающую на вход степень, в которую будет возводиться число 2
+
+
+function st (x){
+    console.log(Math.pow(2, x))            
+}
+
+st(15)
+
+
+
 
 
 const exp = function(b){
@@ -54,17 +77,50 @@ for (var i = 0; i < 5; i++){
 
 
 
-c = 1
+b = 1
 for (var i = 1; i < 6; i++){
-    console.log(':)'.repeat(c))
-    c ++
+    console.log(':)'.repeat(b))
+    b ++
 }
 
 
 
+for(i=1; i<=5; i++){                        
+    a = `:)`
+    console.log(a.repeat(i))
+}
+
+
+let result = ''
+let smile = ':)'
+for(i=1; i<=5; i++){                       
+        console.log(result += smile)            
+    }
+
+    
 
 //2*. Преобразовать 2 задачу в функцию, принимающую на вход строку, которая и будет выводиться в консоль (как в условии смайлик), а также количество строк для вывода 
 //e.g. function printSmile(stroka, numberOfRows)
+
+
+
+function printSmile(stroka, numberOfRows){
+    for(i=1; i<=numberOfRows; i++){
+        console.log(stroka.repeat(i))
+    }
+}
+
+printSmile("hello ", 3)
+
+
+// let result = ''
+// function printSmile(stroka, numberOfRows){
+//     for(i=1; i<=numberOfRows; i++){
+//         console.log(result += stroka)
+//     }
+// }
+
+// printSmile(':)', 11)
 
 
 
